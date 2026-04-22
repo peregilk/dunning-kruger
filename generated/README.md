@@ -2,6 +2,8 @@
 
 Denne katalogen inneholder de offentlige artefaktene som hører til benchmarken.
 
+Dette er en publiseringsflate, ikke en arbeidsflate. Alt som gjelder bygging, intern scoring, modellkjøring og skjulte data ligger i `dunning-kruger-private`.
+
 ## Innhold
 
 - [data/splits/eval/dataset.jsonl](data/splits/eval/dataset.jsonl)
