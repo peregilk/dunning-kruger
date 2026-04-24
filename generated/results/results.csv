@@ -19,15 +19,19 @@ nbailab-nb-notram-llama-3-1-8b-instruct,Nb Notram Llama 3.1 8B Instruct,National
 swiss-ai-apertus-8b-instruct-2509,Apertus 8B Instruct 2509,Swiss AI,Apertus,8.0,36.0,100.0,64,0,100,100,local-supervised-20260423-gpu1,swiss-ai/Apertus-8B-Instruct-2509
 allenai-olmo-3-7b-instruct,Olmo 3 7B Instruct,Allen AI,OLMo,7.0,35.0,100.0,65,0,100,100,local-supervised-20260423-gpu0,allenai/Olmo-3-7B-Instruct
 lumiopen-llama-poro-2-8b-sft,Llama Poro 2 8B Sft,LumiOpen,Llama Poro,8.0,34.0,100.0,66,0,100,100,local-supervised-20260423-gpu1,LumiOpen/Llama-Poro-2-8B-sft
+nbailab-salamandra-2b-mimir-core-pretrain-nomtulu,Salamandra 2B Mimir Core Pretrain Nomtulu,National Library of Norway,Borealis/NB,2.0,30.0,95.0,70,5,100,100,local-supervised-20260423-gpu0,NbAiLab/salamandra-2b-mimir-core-pretrain-nomtulu
+amd-instella-3b-instruct,Instella 3B Instruct,AMD,Instella,3.0,30.0,100.0,70,0,100,100,local-supervised-20260423-gpu1,amd/Instella-3B-Instruct
 meta-llama-llama-3-1-8b-instruct,Llama 3.1 8B Instruct,Meta,Llama,8.0,27.0,97.0,73,3,100,100,local-supervised-20260423-gpu0,meta-llama/Llama-3.1-8B-Instruct
 ai-sweden-models-llama-3-8b-instruct,Llama 3 8B Instruct,AI Sweden,Llama,8.0,25.0,100.0,75,0,100,100,local-supervised-20260423-gpu1,AI-Sweden-Models/Llama-3-8B-instruct
 essentialai-rnj-1-instruct,Rnj 1 Instruct,Essential AI,Rnj,8.0,25.0,100.0,75,0,100,100,local-supervised-20260423-gpu0,EssentialAI/rnj-1-instruct
 ruternorway-llama-2-13b-chat-norwegian,Llama 2 13B Chat Norwegian,Ruter,Llama,13.0,23.0,99.0,77,1,100,100,local-supervised-20260423-gpu1,RuterNorway/Llama-2-13b-chat-norwegian
 mistralai-ministral-8b-instruct-2410,Ministral 8B Instruct 2410,Mistral AI,Mistral,8.0,20.0,100.0,80,0,100,100,local-supervised-20260423-gpu1,mistralai/Ministral-8B-Instruct-2410
+nbailab-nb-notram-llama-3-2-3b-instruct,Nb Notram Llama 3.2 3B Instruct,National Library of Norway,Borealis/NB,3.0,16.0,100.0,84,0,100,100,local-supervised-20260423-gpu1,NbAiLab/nb-notram-llama-3.2-3b-instruct
 tencent-hunyuan-4b-instruct,Hunyuan 4B Instruct,Tencent,Hunyuan,4.0,16.0,100.0,84,0,100,100,local-supervised-20260423-gpu0,tencent/Hunyuan-4B-Instruct
 allenai-olmo-2-1124-7b-instruct,OLMo 2 1124 7B Instruct,Allen AI,OLMo,7.0,14.0,100.0,86,0,100,100,local-supervised-20260423-gpu1,allenai/OLMo-2-1124-7B-Instruct
 huggingfacetb-smollm3-3b,SmolLM3 3B,Hugging Face,SmolLM,3.0,13.0,100.0,87,0,100,100,local-supervised-20260423-gpu0,HuggingFaceTB/SmolLM3-3B
 bsc-lt-salamandra-2b-instruct,Salamandra 2B Instruct,BSC,Salamandra,2.0,8.0,100.0,92,0,100,100,local-supervised-20260423-gpu0,BSC-LT/salamandra-2b-instruct
 tencent-hunyuan-7b-instruct,Hunyuan 7B Instruct,Tencent,Hunyuan,7.0,8.0,100.0,92,0,100,100,local-supervised-20260423-gpu0,tencent/Hunyuan-7B-Instruct
 nbailab-nb-gpt-j-6b-alpaca,Nb Gpt J 6B Alpaca,National Library of Norway,Borealis/NB,6.0,3.0,100.0,97,0,100,100,local-supervised-20260423-gpu1,NbAiLab/nb-gpt-j-6B-alpaca
+nbailab-eurollm-1-7b-instruct-aurora-open-2511-pretrain-aurora-sft-2512-posttrain,Eurollm 1.7B Instruct Aurora Open 2511 Pretrain Aurora Sft 2512 Posttrain,National Library of Norway,Borealis/NB,1.7,0.0,1.0,100,99,100,100,local-supervised-20260423-gpu0,NbAiLab/eurollm-1.7b-instruct-aurora-open-2511-pretrain-aurora-sft-2512-posttrain
 norwai-norwai-mistral-7b-instruct,NorwAI Mistral 7B Instruct,NorwAI,Mistral,7.0,0.0,52.0,100,48,100,100,local-supervised-20260423-gpu0,NorwAI/NorwAI-Mistral-7B-instruct

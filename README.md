@@ -4,7 +4,6 @@ Hvor lett er det å få en språkmodell til å svare med selvsikker tull?
 
 Dette er den offentlige delen av benchmarken. Repoet inneholder eval-sett, protokoll og publiserte resultater. Det skal være lett å forstå, lett å dele og enkelt å oppdatere med nye modeller.
 
-Åpne [index.html](index.html) for den grafiske resultatvisningen.
 
 ## Hva dette repoet er
 

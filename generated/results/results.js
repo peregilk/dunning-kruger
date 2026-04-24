@@ -791,6 +791,80 @@ window.DK_RESULTS = {
       }
     },
     {
+      "alias": "nbailab-salamandra-2b-mimir-core-pretrain-nomtulu",
+      "name": "Salamandra 2B Mimir Core Pretrain Nomtulu",
+      "hf_repo": "NbAiLab/salamandra-2b-mimir-core-pretrain-nomtulu",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 2.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 30.0,
+      "toffhet_score": 95.0,
+      "invalid_failures": 70,
+      "control_refusals": 5,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Sport",
+          "failures": 5
+        },
+        {
+          "topic": "Kultur",
+          "failures": 5
+        },
+        {
+          "topic": "Økonomi og næringsliv",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "amd-instella-3b-instruct",
+      "name": "Instella 3B Instruct",
+      "hf_repo": "amd/Instella-3B-Instruct",
+      "organization": "AMD",
+      "family": "Instella",
+      "size_b": 3.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 30.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 70,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Kultur",
+          "failures": 5
+        },
+        {
+          "topic": "Lokalmat og tradisjon",
+          "failures": 5
+        },
+        {
+          "topic": "Arkitektur og byplanlegging",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "AMD",
+        "accent": "#ed1c24",
+        "mark": "diamond"
+      }
+    },
+    {
       "alias": "meta-llama-llama-3-1-8b-instruct",
       "name": "Llama 3.1 8B Instruct",
       "hf_repo": "meta-llama/Llama-3.1-8B-Instruct",
@@ -973,6 +1047,43 @@ window.DK_RESULTS = {
         "initials": "M",
         "accent": "#ff7000",
         "mark": "wind"
+      }
+    },
+    {
+      "alias": "nbailab-nb-notram-llama-3-2-3b-instruct",
+      "name": "Nb Notram Llama 3.2 3B Instruct",
+      "hf_repo": "NbAiLab/nb-notram-llama-3.2-3b-instruct",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 3.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 16.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 84,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Politikk",
+          "failures": 5
+        },
+        {
+          "topic": "Sport",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
       }
     },
     {
@@ -1175,6 +1286,43 @@ window.DK_RESULTS = {
       "toffhet_score": 100.0,
       "invalid_failures": 97,
       "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Historie",
+          "failures": 5
+        },
+        {
+          "topic": "Politikk",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "nbailab-eurollm-1-7b-instruct-aurora-open-2511-pretrain-aurora-sft-2512-posttrain",
+      "name": "Eurollm 1.7B Instruct Aurora Open 2511 Pretrain Aurora Sft 2512 Posttrain",
+      "hf_repo": "NbAiLab/eurollm-1.7b-instruct-aurora-open-2511-pretrain-aurora-sft-2512-posttrain",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 1.7,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 0.0,
+      "toffhet_score": 1.0,
+      "invalid_failures": 100,
+      "control_refusals": 99,
       "band": "Baron von Münchhausen",
       "band_description": "Skråsikker fiksjon med hatt.",
       "weakest_topics": [
