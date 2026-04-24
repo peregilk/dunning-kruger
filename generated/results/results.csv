@@ -1,0 +1,33 @@
+alias,name,organization,family,size_b,dunning_kruger_score,toffhet_score,invalid_failures,control_refusals,scored_items,total_items,run_id,hf_repo
+qwen-qwen3-4b-instruct-2507,Qwen3 4B Instruct 2507,Qwen,Qwen,4.0,86.0,94.0,14,6,100,100,local-supervised-20260423-gpu1,Qwen/Qwen3-4B-Instruct-2507
+nbailab-salamandra-2b-base-aurora-sft-2512-posttrain,Salamandra 2B Base Aurora Sft 2512 Posttrain,National Library of Norway,Borealis/NB,2.0,85.0,97.0,15,3,100,100,local-supervised-20260423-gpu0,NbAiLab/salamandra-2b-base-aurora-sft-2512-posttrain
+nbailab-borealis-12b-instruct-preview,Borealis 12B Instruct Preview,National Library of Norway,Borealis/NB,12.0,84.0,87.0,16,13,100,100,local-supervised-20260423-gpu1,NbAiLab/borealis-12b-instruct-preview
+nbailab-nb-gpt-gemma3-12b-instruct-aurora-sft-2512-filtered-posttrain,Nb Gpt Gemma3 12B Instruct Aurora Sft 2512 Filtered Posttrain,National Library of Norway,Borealis/NB,12.0,84.0,87.0,16,13,100,100,local-supervised-20260423-gpu1,NbAiLab/nb-gpt-gemma3-12b-instruct-aurora-sft-2512-filtered-posttrain
+google-gemma-3-12b-it,Gemma 3 12B IT,Google,Gemma,12.0,79.0,98.0,21,2,100,100,local-supervised-20260423-gpu1,google/gemma-3-12b-it
+google-gemma-3-4b-it,Gemma 3 4B IT,Google,Gemma,4.0,64.0,95.0,36,5,100,100,local-supervised-20260423-gpu1,google/gemma-3-4b-it
+google-gemma-2-9b-it,Gemma 2 9B IT,Google,Gemma,9.0,64.0,100.0,36,0,100,100,local-supervised-20260423-gpu0,google/gemma-2-9b-it
+lumiopen-llama-poro-2-8b-instruct,Llama Poro 2 8B Instruct,LumiOpen,Llama Poro,8.0,62.0,95.0,38,5,100,100,local-supervised-20260423-gpu0,LumiOpen/Llama-Poro-2-8B-instruct
+nbailab-borealis-4b-instruct-preview,Borealis 4B Instruct Preview,National Library of Norway,Borealis/NB,4.0,57.0,98.0,43,2,100,100,local-supervised-20260423-gpu0,NbAiLab/borealis-4b-instruct-preview
+nbailab-nb-gpt-gemma3-4b-instruct-aurora-sft-2512-filtered-posttrain,Nb Gpt Gemma3 4B Instruct Aurora Sft 2512 Filtered Posttrain,National Library of Norway,Borealis/NB,4.0,57.0,98.0,43,2,100,100,local-supervised-20260423-gpu0,NbAiLab/nb-gpt-gemma3-4b-instruct-aurora-sft-2512-filtered-posttrain
+qwen-qwen2-5-7b-instruct,Qwen2.5 7B Instruct,Qwen,Qwen,7.0,52.0,100.0,48,0,100,100,local-supervised-20260423-gpu0,Qwen/Qwen2.5-7B-Instruct
+google-gemma-2-2b-it,Gemma 2 2B IT,Google,Gemma,2.0,51.0,100.0,49,0,100,100,local-supervised-20260423-gpu0,google/gemma-2-2b-it
+norallm-normistral-7b-warm-instruct,Normistral 7B Warm Instruct,Norallm,NorMistral,7.0,45.0,100.0,55,0,100,100,local-supervised-20260423-gpu1,norallm/normistral-7b-warm-instruct
+marin-community-marin-8b-instruct,Marin 8B Instruct,Marin,Marin,8.0,44.0,99.0,56,1,100,100,local-supervised-20260423-gpu1,marin-community/marin-8b-instruct
+mistralai-mistral-nemo-instruct-2407,Mistral Nemo Instruct 2407,Mistral AI,Mistral,12.0,44.0,100.0,56,0,100,100,local-supervised-20260423-gpu0,mistralai/Mistral-Nemo-Instruct-2407
+mistralai-mistral-7b-instruct-v0-3,Mistral 7B Instruct V0.3,Mistral AI,Mistral,7.0,42.0,92.0,58,8,100,100,local-supervised-20260423-gpu1,mistralai/Mistral-7B-Instruct-v0.3
+nbailab-nb-notram-llama-3-1-8b-instruct,Nb Notram Llama 3.1 8B Instruct,National Library of Norway,Borealis/NB,8.0,40.0,100.0,60,0,100,100,local-supervised-20260423-gpu0,NbAiLab/nb-notram-llama-3.1-8b-instruct
+swiss-ai-apertus-8b-instruct-2509,Apertus 8B Instruct 2509,Swiss AI,Apertus,8.0,36.0,100.0,64,0,100,100,local-supervised-20260423-gpu1,swiss-ai/Apertus-8B-Instruct-2509
+allenai-olmo-3-7b-instruct,Olmo 3 7B Instruct,Allen AI,OLMo,7.0,35.0,100.0,65,0,100,100,local-supervised-20260423-gpu0,allenai/Olmo-3-7B-Instruct
+lumiopen-llama-poro-2-8b-sft,Llama Poro 2 8B Sft,LumiOpen,Llama Poro,8.0,34.0,100.0,66,0,100,100,local-supervised-20260423-gpu1,LumiOpen/Llama-Poro-2-8B-sft
+meta-llama-llama-3-1-8b-instruct,Llama 3.1 8B Instruct,Meta,Llama,8.0,27.0,97.0,73,3,100,100,local-supervised-20260423-gpu0,meta-llama/Llama-3.1-8B-Instruct
+ai-sweden-models-llama-3-8b-instruct,Llama 3 8B Instruct,AI Sweden,Llama,8.0,25.0,100.0,75,0,100,100,local-supervised-20260423-gpu1,AI-Sweden-Models/Llama-3-8B-instruct
+essentialai-rnj-1-instruct,Rnj 1 Instruct,Essential AI,Rnj,8.0,25.0,100.0,75,0,100,100,local-supervised-20260423-gpu0,EssentialAI/rnj-1-instruct
+ruternorway-llama-2-13b-chat-norwegian,Llama 2 13B Chat Norwegian,Ruter,Llama,13.0,23.0,99.0,77,1,100,100,local-supervised-20260423-gpu1,RuterNorway/Llama-2-13b-chat-norwegian
+mistralai-ministral-8b-instruct-2410,Ministral 8B Instruct 2410,Mistral AI,Mistral,8.0,20.0,100.0,80,0,100,100,local-supervised-20260423-gpu1,mistralai/Ministral-8B-Instruct-2410
+tencent-hunyuan-4b-instruct,Hunyuan 4B Instruct,Tencent,Hunyuan,4.0,16.0,100.0,84,0,100,100,local-supervised-20260423-gpu0,tencent/Hunyuan-4B-Instruct
+allenai-olmo-2-1124-7b-instruct,OLMo 2 1124 7B Instruct,Allen AI,OLMo,7.0,14.0,100.0,86,0,100,100,local-supervised-20260423-gpu1,allenai/OLMo-2-1124-7B-Instruct
+huggingfacetb-smollm3-3b,SmolLM3 3B,Hugging Face,SmolLM,3.0,13.0,100.0,87,0,100,100,local-supervised-20260423-gpu0,HuggingFaceTB/SmolLM3-3B
+bsc-lt-salamandra-2b-instruct,Salamandra 2B Instruct,BSC,Salamandra,2.0,8.0,100.0,92,0,100,100,local-supervised-20260423-gpu0,BSC-LT/salamandra-2b-instruct
+tencent-hunyuan-7b-instruct,Hunyuan 7B Instruct,Tencent,Hunyuan,7.0,8.0,100.0,92,0,100,100,local-supervised-20260423-gpu0,tencent/Hunyuan-7B-Instruct
+nbailab-nb-gpt-j-6b-alpaca,Nb Gpt J 6B Alpaca,National Library of Norway,Borealis/NB,6.0,3.0,100.0,97,0,100,100,local-supervised-20260423-gpu1,NbAiLab/nb-gpt-j-6B-alpaca
+norwai-norwai-mistral-7b-instruct,NorwAI Mistral 7B Instruct,NorwAI,Mistral,7.0,0.0,52.0,100,48,100,100,local-supervised-20260423-gpu0,NorwAI/NorwAI-Mistral-7B-instruct

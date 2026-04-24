@@ -12,6 +12,8 @@ Dette er en publiseringsflate, ikke en arbeidsflate. Alt som gjelder bygging, in
   Samme eval-sett i lesbar form.
 - [evaluation/model_response/README.md](evaluation/model_response/README.md)
   Dokumentasjon for hvordan svar kan vurderes.
+- [results/](results/)
+  Aggregerte modellresultater som brukes av den offentlige resultatvisningen.
 
 ## Viktig
 

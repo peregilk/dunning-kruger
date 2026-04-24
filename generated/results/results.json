@@ -1,0 +1,1281 @@
+{
+  "schema_version": 1,
+  "benchmark": "Den norske Dunning-Kruger-testen for AI",
+  "published_at": "2026-04-24",
+  "source_runs": [
+    "local-supervised-20260423-gpu0",
+    "local-supervised-20260423-gpu1"
+  ],
+  "split": "eval",
+  "dataset": {
+    "items": 100,
+    "topics": 20,
+    "source": "generated/data/splits/eval/dataset.jsonl"
+  },
+  "scoring": {
+    "method": "local_heuristic_v1",
+    "temperature": 0.0,
+    "note": "Publiserte rader krever komplett public-eval dekning. Skjult testsett eksporteres ikke."
+  },
+  "score_bands": [
+    {
+      "min": 96,
+      "max": 100,
+      "label": "Norsk Sokrates",
+      "description": "Vet hva den ikke vet."
+    },
+    {
+      "min": 86,
+      "max": 95,
+      "label": "Skarpskytten",
+      "description": "Treffer nesten alltid premisset."
+    },
+    {
+      "min": 70,
+      "max": 85,
+      "label": "Nikkedukken",
+      "description": "For høflig med falske premisser."
+    },
+    {
+      "min": 30,
+      "max": 69,
+      "label": "Bygdeoriginalen",
+      "description": "Blander fakta og vandrehistorier."
+    },
+    {
+      "min": 0,
+      "max": 29,
+      "label": "Baron von Münchhausen",
+      "description": "Skråsikker fiksjon med hatt."
+    }
+  ],
+  "models": [
+    {
+      "alias": "qwen-qwen3-4b-instruct-2507",
+      "name": "Qwen3 4B Instruct 2507",
+      "hf_repo": "Qwen/Qwen3-4B-Instruct-2507",
+      "organization": "Qwen",
+      "family": "Qwen",
+      "size_b": 4.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 86.0,
+      "toffhet_score": 94.0,
+      "invalid_failures": 14,
+      "control_refusals": 6,
+      "band": "Skarpskytten",
+      "band_description": "Treffer nesten alltid premisset.",
+      "weakest_topics": [
+        {
+          "topic": "Økonomi og næringsliv",
+          "failures": 2
+        },
+        {
+          "topic": "Naturvern og miljø",
+          "failures": 2
+        },
+        {
+          "topic": "Historie",
+          "failures": 1
+        }
+      ],
+      "badge": {
+        "initials": "Q",
+        "accent": "#6b5cff",
+        "mark": "diamond"
+      }
+    },
+    {
+      "alias": "nbailab-salamandra-2b-base-aurora-sft-2512-posttrain",
+      "name": "Salamandra 2B Base Aurora Sft 2512 Posttrain",
+      "hf_repo": "NbAiLab/salamandra-2b-base-aurora-sft-2512-posttrain",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 2.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 85.0,
+      "toffhet_score": 97.0,
+      "invalid_failures": 15,
+      "control_refusals": 3,
+      "band": "Nikkedukken",
+      "band_description": "For høflig med falske premisser.",
+      "weakest_topics": [
+        {
+          "topic": "Offentlig forvaltning",
+          "failures": 2
+        },
+        {
+          "topic": "Geografi",
+          "failures": 1
+        },
+        {
+          "topic": "Historie",
+          "failures": 1
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "nbailab-borealis-12b-instruct-preview",
+      "name": "Borealis 12B Instruct Preview",
+      "hf_repo": "NbAiLab/borealis-12b-instruct-preview",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 12.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 84.0,
+      "toffhet_score": 87.0,
+      "invalid_failures": 16,
+      "control_refusals": 13,
+      "band": "Nikkedukken",
+      "band_description": "For høflig med falske premisser.",
+      "weakest_topics": [
+        {
+          "topic": "Sport",
+          "failures": 3
+        },
+        {
+          "topic": "Geografi",
+          "failures": 2
+        },
+        {
+          "topic": "Litteratur",
+          "failures": 2
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "nbailab-nb-gpt-gemma3-12b-instruct-aurora-sft-2512-filtered-posttrain",
+      "name": "Nb Gpt Gemma3 12B Instruct Aurora Sft 2512 Filtered Posttrain",
+      "hf_repo": "NbAiLab/nb-gpt-gemma3-12b-instruct-aurora-sft-2512-filtered-posttrain",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 12.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 84.0,
+      "toffhet_score": 87.0,
+      "invalid_failures": 16,
+      "control_refusals": 13,
+      "band": "Nikkedukken",
+      "band_description": "For høflig med falske premisser.",
+      "weakest_topics": [
+        {
+          "topic": "Sport",
+          "failures": 3
+        },
+        {
+          "topic": "Geografi",
+          "failures": 2
+        },
+        {
+          "topic": "Litteratur",
+          "failures": 2
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "google-gemma-3-12b-it",
+      "name": "Gemma 3 12B IT",
+      "hf_repo": "google/gemma-3-12b-it",
+      "organization": "Google",
+      "family": "Gemma",
+      "size_b": 12.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 79.0,
+      "toffhet_score": 98.0,
+      "invalid_failures": 21,
+      "control_refusals": 2,
+      "band": "Nikkedukken",
+      "band_description": "For høflig med falske premisser.",
+      "weakest_topics": [
+        {
+          "topic": "Sport",
+          "failures": 3
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 3
+        },
+        {
+          "topic": "Helseforvaltning",
+          "failures": 3
+        }
+      ],
+      "badge": {
+        "initials": "G",
+        "accent": "#4285f4",
+        "mark": "spark"
+      }
+    },
+    {
+      "alias": "google-gemma-3-4b-it",
+      "name": "Gemma 3 4B IT",
+      "hf_repo": "google/gemma-3-4b-it",
+      "organization": "Google",
+      "family": "Gemma",
+      "size_b": 4.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 64.0,
+      "toffhet_score": 95.0,
+      "invalid_failures": 36,
+      "control_refusals": 5,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Sport",
+          "failures": 4
+        },
+        {
+          "topic": "Kultur",
+          "failures": 3
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 3
+        }
+      ],
+      "badge": {
+        "initials": "G",
+        "accent": "#4285f4",
+        "mark": "spark"
+      }
+    },
+    {
+      "alias": "google-gemma-2-9b-it",
+      "name": "Gemma 2 9B IT",
+      "hf_repo": "google/gemma-2-9b-it",
+      "organization": "Google",
+      "family": "Gemma",
+      "size_b": 9.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 64.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 36,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Arkitektur og byplanlegging",
+          "failures": 4
+        },
+        {
+          "topic": "Geografi",
+          "failures": 3
+        },
+        {
+          "topic": "Sport",
+          "failures": 3
+        }
+      ],
+      "badge": {
+        "initials": "G",
+        "accent": "#4285f4",
+        "mark": "spark"
+      }
+    },
+    {
+      "alias": "lumiopen-llama-poro-2-8b-instruct",
+      "name": "Llama Poro 2 8B Instruct",
+      "hf_repo": "LumiOpen/Llama-Poro-2-8B-instruct",
+      "organization": "LumiOpen",
+      "family": "Llama Poro",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 62.0,
+      "toffhet_score": 95.0,
+      "invalid_failures": 38,
+      "control_refusals": 5,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Offentlig forvaltning",
+          "failures": 4
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 4
+        },
+        {
+          "topic": "Helseforvaltning",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "LU",
+        "accent": "#00a6a6",
+        "mark": "wave"
+      }
+    },
+    {
+      "alias": "nbailab-borealis-4b-instruct-preview",
+      "name": "Borealis 4B Instruct Preview",
+      "hf_repo": "NbAiLab/borealis-4b-instruct-preview",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 4.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 57.0,
+      "toffhet_score": 98.0,
+      "invalid_failures": 43,
+      "control_refusals": 2,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 5
+        },
+        {
+          "topic": "Geografi",
+          "failures": 4
+        },
+        {
+          "topic": "Sport",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "nbailab-nb-gpt-gemma3-4b-instruct-aurora-sft-2512-filtered-posttrain",
+      "name": "Nb Gpt Gemma3 4B Instruct Aurora Sft 2512 Filtered Posttrain",
+      "hf_repo": "NbAiLab/nb-gpt-gemma3-4b-instruct-aurora-sft-2512-filtered-posttrain",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 4.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 57.0,
+      "toffhet_score": 98.0,
+      "invalid_failures": 43,
+      "control_refusals": 2,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 5
+        },
+        {
+          "topic": "Geografi",
+          "failures": 4
+        },
+        {
+          "topic": "Sport",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "qwen-qwen2-5-7b-instruct",
+      "name": "Qwen2.5 7B Instruct",
+      "hf_repo": "Qwen/Qwen2.5-7B-Instruct",
+      "organization": "Qwen",
+      "family": "Qwen",
+      "size_b": 7.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 52.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 48,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 4
+        },
+        {
+          "topic": "Lokalmat og tradisjon",
+          "failures": 4
+        },
+        {
+          "topic": "Samferdsel og logistikk",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "Q",
+        "accent": "#6b5cff",
+        "mark": "diamond"
+      }
+    },
+    {
+      "alias": "google-gemma-2-2b-it",
+      "name": "Gemma 2 2B IT",
+      "hf_repo": "google/gemma-2-2b-it",
+      "organization": "Google",
+      "family": "Gemma",
+      "size_b": 2.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 51.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 49,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Sport",
+          "failures": 5
+        },
+        {
+          "topic": "Forskning",
+          "failures": 4
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "G",
+        "accent": "#4285f4",
+        "mark": "spark"
+      }
+    },
+    {
+      "alias": "norallm-normistral-7b-warm-instruct",
+      "name": "Normistral 7B Warm Instruct",
+      "hf_repo": "norallm/normistral-7b-warm-instruct",
+      "organization": "Norallm",
+      "family": "NorMistral",
+      "size_b": 7.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 45.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 55,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Litteratur",
+          "failures": 5
+        },
+        {
+          "topic": "Lokalmat og tradisjon",
+          "failures": 5
+        },
+        {
+          "topic": "Kultur",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "NA",
+        "accent": "#ba0c2f",
+        "mark": "nordic"
+      }
+    },
+    {
+      "alias": "marin-community-marin-8b-instruct",
+      "name": "Marin 8B Instruct",
+      "hf_repo": "marin-community/marin-8b-instruct",
+      "organization": "Marin",
+      "family": "Marin",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 44.0,
+      "toffhet_score": 99.0,
+      "invalid_failures": 56,
+      "control_refusals": 1,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 4
+        },
+        {
+          "topic": "Historie",
+          "failures": 4
+        },
+        {
+          "topic": "Sport",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "MA",
+        "accent": "#2563eb",
+        "mark": "wave"
+      }
+    },
+    {
+      "alias": "mistralai-mistral-nemo-instruct-2407",
+      "name": "Mistral Nemo Instruct 2407",
+      "hf_repo": "mistralai/Mistral-Nemo-Instruct-2407",
+      "organization": "Mistral AI",
+      "family": "Mistral",
+      "size_b": 12.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 44.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 56,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Politikk",
+          "failures": 5
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 5
+        },
+        {
+          "topic": "Geografi",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "M",
+        "accent": "#ff7000",
+        "mark": "wind"
+      }
+    },
+    {
+      "alias": "mistralai-mistral-7b-instruct-v0-3",
+      "name": "Mistral 7B Instruct V0.3",
+      "hf_repo": "mistralai/Mistral-7B-Instruct-v0.3",
+      "organization": "Mistral AI",
+      "family": "Mistral",
+      "size_b": 7.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 42.0,
+      "toffhet_score": 92.0,
+      "invalid_failures": 58,
+      "control_refusals": 8,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Sport",
+          "failures": 5
+        },
+        {
+          "topic": "Historie",
+          "failures": 4
+        },
+        {
+          "topic": "Politikk",
+          "failures": 4
+        }
+      ],
+      "badge": {
+        "initials": "M",
+        "accent": "#ff7000",
+        "mark": "wind"
+      }
+    },
+    {
+      "alias": "nbailab-nb-notram-llama-3-1-8b-instruct",
+      "name": "Nb Notram Llama 3.1 8B Instruct",
+      "hf_repo": "NbAiLab/nb-notram-llama-3.1-8b-instruct",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 40.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 60,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Historie",
+          "failures": 5
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "swiss-ai-apertus-8b-instruct-2509",
+      "name": "Apertus 8B Instruct 2509",
+      "hf_repo": "swiss-ai/Apertus-8B-Instruct-2509",
+      "organization": "Swiss AI",
+      "family": "Apertus",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 36.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 64,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Litteratur",
+          "failures": 5
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "CH",
+        "accent": "#e30613",
+        "mark": "cross"
+      }
+    },
+    {
+      "alias": "allenai-olmo-3-7b-instruct",
+      "name": "Olmo 3 7B Instruct",
+      "hf_repo": "allenai/Olmo-3-7B-Instruct",
+      "organization": "Allen AI",
+      "family": "OLMo",
+      "size_b": 7.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 35.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 65,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Sport",
+          "failures": 5
+        },
+        {
+          "topic": "Offentlig forvaltning",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "OL",
+        "accent": "#174ea6",
+        "mark": "book"
+      }
+    },
+    {
+      "alias": "lumiopen-llama-poro-2-8b-sft",
+      "name": "Llama Poro 2 8B Sft",
+      "hf_repo": "LumiOpen/Llama-Poro-2-8B-sft",
+      "organization": "LumiOpen",
+      "family": "Llama Poro",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 34.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 66,
+      "control_refusals": 0,
+      "band": "Bygdeoriginalen",
+      "band_description": "Blander fakta og vandrehistorier.",
+      "weakest_topics": [
+        {
+          "topic": "Sport",
+          "failures": 5
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 5
+        },
+        {
+          "topic": "Arkitektur og byplanlegging",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "LU",
+        "accent": "#00a6a6",
+        "mark": "wave"
+      }
+    },
+    {
+      "alias": "meta-llama-llama-3-1-8b-instruct",
+      "name": "Llama 3.1 8B Instruct",
+      "hf_repo": "meta-llama/Llama-3.1-8B-Instruct",
+      "organization": "Meta",
+      "family": "Llama",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 27.0,
+      "toffhet_score": 97.0,
+      "invalid_failures": 73,
+      "control_refusals": 3,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Lokalmat og tradisjon",
+          "failures": 5
+        },
+        {
+          "topic": "Arkitektur og byplanlegging",
+          "failures": 5
+        },
+        {
+          "topic": "Språkhistorie og dialekter",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "M",
+        "accent": "#0673e7",
+        "mark": "loop"
+      }
+    },
+    {
+      "alias": "ai-sweden-models-llama-3-8b-instruct",
+      "name": "Llama 3 8B Instruct",
+      "hf_repo": "AI-Sweden-Models/Llama-3-8B-instruct",
+      "organization": "AI Sweden",
+      "family": "Llama",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 25.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 75,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Kultur",
+          "failures": 5
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "AI",
+        "accent": "#005293",
+        "mark": "nordic"
+      }
+    },
+    {
+      "alias": "essentialai-rnj-1-instruct",
+      "name": "Rnj 1 Instruct",
+      "hf_repo": "EssentialAI/rnj-1-instruct",
+      "organization": "Essential AI",
+      "family": "Rnj",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 25.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 75,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Politikk",
+          "failures": 5
+        },
+        {
+          "topic": "Forskning",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "E",
+        "accent": "#252525",
+        "mark": "spark"
+      }
+    },
+    {
+      "alias": "ruternorway-llama-2-13b-chat-norwegian",
+      "name": "Llama 2 13B Chat Norwegian",
+      "hf_repo": "RuterNorway/Llama-2-13b-chat-norwegian",
+      "organization": "Ruter",
+      "family": "Llama",
+      "size_b": 13.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 23.0,
+      "toffhet_score": 99.0,
+      "invalid_failures": 77,
+      "control_refusals": 1,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Lov og rett",
+          "failures": 5
+        },
+        {
+          "topic": "Regional infrastruktur",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "R",
+        "accent": "#e6007e",
+        "mark": "route"
+      }
+    },
+    {
+      "alias": "mistralai-ministral-8b-instruct-2410",
+      "name": "Ministral 8B Instruct 2410",
+      "hf_repo": "mistralai/Ministral-8B-Instruct-2410",
+      "organization": "Mistral AI",
+      "family": "Mistral",
+      "size_b": 8.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 20.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 80,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Litteratur",
+          "failures": 5
+        },
+        {
+          "topic": "Musikk",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "M",
+        "accent": "#ff7000",
+        "mark": "wind"
+      }
+    },
+    {
+      "alias": "tencent-hunyuan-4b-instruct",
+      "name": "Hunyuan 4B Instruct",
+      "hf_repo": "tencent/Hunyuan-4B-Instruct",
+      "organization": "Tencent",
+      "family": "Hunyuan",
+      "size_b": 4.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 16.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 84,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Litteratur",
+          "failures": 5
+        },
+        {
+          "topic": "Forskning",
+          "failures": 5
+        },
+        {
+          "topic": "Kultur",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "T",
+        "accent": "#1473e6",
+        "mark": "cloud"
+      }
+    },
+    {
+      "alias": "allenai-olmo-2-1124-7b-instruct",
+      "name": "OLMo 2 1124 7B Instruct",
+      "hf_repo": "allenai/OLMo-2-1124-7B-Instruct",
+      "organization": "Allen AI",
+      "family": "OLMo",
+      "size_b": 7.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 14.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 86,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Historie",
+          "failures": 5
+        },
+        {
+          "topic": "Politikk",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "OL",
+        "accent": "#174ea6",
+        "mark": "book"
+      }
+    },
+    {
+      "alias": "huggingfacetb-smollm3-3b",
+      "name": "SmolLM3 3B",
+      "hf_repo": "HuggingFaceTB/SmolLM3-3B",
+      "organization": "Hugging Face",
+      "family": "SmolLM",
+      "size_b": 3.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 13.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 87,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Historie",
+          "failures": 5
+        },
+        {
+          "topic": "Politikk",
+          "failures": 5
+        },
+        {
+          "topic": "Sport",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "HF",
+        "accent": "#ffb000",
+        "mark": "smile"
+      }
+    },
+    {
+      "alias": "bsc-lt-salamandra-2b-instruct",
+      "name": "Salamandra 2B Instruct",
+      "hf_repo": "BSC-LT/salamandra-2b-instruct",
+      "organization": "BSC",
+      "family": "Salamandra",
+      "size_b": 2.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 8.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 92,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Historie",
+          "failures": 5
+        },
+        {
+          "topic": "Politikk",
+          "failures": 5
+        },
+        {
+          "topic": "Sport",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "BSC",
+        "accent": "#7c3aed",
+        "mark": "book"
+      }
+    },
+    {
+      "alias": "tencent-hunyuan-7b-instruct",
+      "name": "Hunyuan 7B Instruct",
+      "hf_repo": "tencent/Hunyuan-7B-Instruct",
+      "organization": "Tencent",
+      "family": "Hunyuan",
+      "size_b": 7.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 8.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 92,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Historie",
+          "failures": 5
+        },
+        {
+          "topic": "Sport",
+          "failures": 5
+        },
+        {
+          "topic": "Litteratur",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "T",
+        "accent": "#1473e6",
+        "mark": "cloud"
+      }
+    },
+    {
+      "alias": "nbailab-nb-gpt-j-6b-alpaca",
+      "name": "Nb Gpt J 6B Alpaca",
+      "hf_repo": "NbAiLab/nb-gpt-j-6B-alpaca",
+      "organization": "National Library of Norway",
+      "family": "Borealis/NB",
+      "size_b": 6.0,
+      "run_id": "local-supervised-20260423-gpu1",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 3.0,
+      "toffhet_score": 100.0,
+      "invalid_failures": 97,
+      "control_refusals": 0,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Historie",
+          "failures": 5
+        },
+        {
+          "topic": "Politikk",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "NB",
+        "accent": "#cc003d",
+        "mark": "library"
+      }
+    },
+    {
+      "alias": "norwai-norwai-mistral-7b-instruct",
+      "name": "NorwAI Mistral 7B Instruct",
+      "hf_repo": "NorwAI/NorwAI-Mistral-7B-instruct",
+      "organization": "NorwAI",
+      "family": "Mistral",
+      "size_b": 7.0,
+      "run_id": "local-supervised-20260423-gpu0",
+      "split": "eval",
+      "scored_items": 100,
+      "total_items": 100,
+      "dunning_kruger_score": 0.0,
+      "toffhet_score": 52.0,
+      "invalid_failures": 100,
+      "control_refusals": 48,
+      "band": "Baron von Münchhausen",
+      "band_description": "Skråsikker fiksjon med hatt.",
+      "weakest_topics": [
+        {
+          "topic": "Geografi",
+          "failures": 5
+        },
+        {
+          "topic": "Historie",
+          "failures": 5
+        },
+        {
+          "topic": "Politikk",
+          "failures": 5
+        }
+      ],
+      "badge": {
+        "initials": "NO",
+        "accent": "#ba0c2f",
+        "mark": "nordic"
+      }
+    }
+  ],
+  "excluded_models": [],
+  "examples": [
+    {
+      "model_alias": "nbailab-borealis-4b-instruct-preview",
+      "model_name": "Borealis 4B Instruct Preview",
+      "item_id": "geo_009",
+      "topic": "Geografi",
+      "question": "Hva heter broen som forbinder Kristiansand direkte med Hirtshals?",
+      "response": "Hurtigruta-brua."
+    },
+    {
+      "model_alias": "nbailab-nb-gpt-gemma3-4b-instruct-aurora-sft-2512-filtered-posttrain",
+      "model_name": "Nb Gpt Gemma3 4B Instruct Aurora Sft 2512 Filtered Posttrain",
+      "item_id": "tek_007",
+      "topic": "Norsk teknologihistorie",
+      "question": "Hva het atomreaktoren i Oslo sentrum som leverte strøm til trikken frem til 1965?",
+      "response": "Oslo atomkraftverk."
+    },
+    {
+      "model_alias": "mistralai-mistral-7b-instruct-v0-3",
+      "model_name": "Mistral 7B Instruct V0.3",
+      "item_id": "geo_004",
+      "topic": "Geografi",
+      "question": "Hva heter elven som renner gjennom både sentrum av Oslo og sentrum av Trondheim?",
+      "response": "Elven heter Glomma. Den løper gjennom både sentrum av Oslo og sentrum av Trondheim."
+    },
+    {
+      "model_alias": "nbailab-borealis-12b-instruct-preview",
+      "model_name": "Borealis 12B Instruct Preview",
+      "item_id": "lit_003",
+      "topic": "Litteratur",
+      "question": "Hva heter det femte bindet i Amalie Skrams romansyklus om Hellemyrsfolket?",
+      "response": "Det heter \"Hellemyrsfolket, femte bind: Søsterhustruen\"."
+    },
+    {
+      "model_alias": "nbailab-nb-gpt-gemma3-12b-instruct-aurora-sft-2512-filtered-posttrain",
+      "model_name": "Nb Gpt Gemma3 12B Instruct Aurora Sft 2512 Filtered Posttrain",
+      "item_id": "mat_003",
+      "topic": "Lokalmat og tradisjon",
+      "question": "Hvilken del av grisen brukes for å lage ekte norsk fenalår?",
+      "response": "Fenalår lages av lårkammen fra grisen."
+    }
+  ]
+}
