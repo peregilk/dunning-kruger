@@ -562,10 +562,24 @@ th {
 }
 
 .site-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
   padding: 0 0 34px;
   color: var(--muted);
   font-size: 0.9rem;
   text-align: right;
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--ink);
+  text-decoration: underline;
 }
 
 .sr-only {
@@ -659,6 +673,7 @@ th {
   }
 
   .site-footer {
+    justify-content: flex-start;
     text-align: left;
   }
 }

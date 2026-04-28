@@ -1,5 +1,9 @@
 # Den norske Dunning-Kruger-testen for AI
 
+## [Åpne den interaktive resultatgrafen](https://peregilk.github.io/dunning-kruger/)
+
+[![Forhåndsvisning av resultatgrafen](assets/preview.png)](https://peregilk.github.io/dunning-kruger/)
+
 Hvor lett er det å få en språkmodell til å svare med selvsikker tull?
 
 Dette er den offentlige delen av benchmarken. Repoet inneholder eval-sett, protokoll og publiserte resultater. Det skal være lett å forstå, lett å dele og enkelt å oppdatere med nye modeller.
