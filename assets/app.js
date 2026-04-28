@@ -157,9 +157,7 @@ function logoBackground(badge) {
 }
 
 function setSummary() {
-  const modelCount = document.getElementById("modelCount");
   const updatedAt = document.getElementById("updatedAt");
-  if (modelCount) modelCount.textContent = `${data.models.length} modeller`;
   if (updatedAt) updatedAt.textContent = `Oppdatert ${formatDate(data.published_at)}`;
 }
 
@@ -452,8 +450,8 @@ function renderDetail() {
     <div class="model-card-head">
       <h3>${escapeHtml(model.name)}</h3>
       <div class="model-actions" aria-label="Vis eksempler for valgt modell">
-        <button type="button" data-modal-view="hallucination_misses">Feil svar</button>
-        <button type="button" data-modal-view="control_refusals">Trekk</button>
+        <button type="button" data-modal-view="hallucination_misses">Vis feil svar</button>
+        <button type="button" data-modal-view="control_refusals">Vis trekk</button>
       </div>
     </div>
     <dl class="selected-stats" aria-label="Valgt modell">
