@@ -55,6 +55,10 @@ function scoreLabel(score) {
   return score.toLocaleString("nb-NO", { maximumFractionDigits: 1 });
 }
 
+function percentScoreLabel(score) {
+  return `${scoreLabel(score)}%`;
+}
+
 function penaltyLabel(model) {
   const penalty = model.feighetsjustert_penalty || 0;
   return penalty ? `-${scoreLabel(penalty)}` : "0";
@@ -309,7 +313,7 @@ function renderChart() {
 
   const width = 1480;
   const height = 780;
-  const margin = { top: 26, right: 34, bottom: 64, left: 88 };
+  const margin = { top: 26, right: 34, bottom: 48, left: 74 };
   const plotWidth = width - margin.left - margin.right;
   const plotHeight = height - margin.top - margin.bottom;
   const sizes = data.models.map((model) => Math.max(model.size_b, 0.25));
@@ -363,7 +367,7 @@ function renderChart() {
       y: tickY + 4,
       class: "axis-label y-label",
     });
-    label.textContent = tick;
+    label.textContent = `${tick}%`;
     gridGroup.appendChild(label);
   });
 
@@ -386,23 +390,6 @@ function renderChart() {
   });
   svg.appendChild(gridGroup);
 
-  const xTitle = createSvgElement("text", {
-    x: margin.left + plotWidth / 2,
-    y: height - 22,
-    class: "axis-title",
-  });
-  xTitle.textContent = "Modellstørrelse (B parametre)";
-  svg.appendChild(xTitle);
-
-  const yTitle = createSvgElement("text", {
-    x: 23,
-    y: margin.top + plotHeight / 2,
-    class: "axis-title",
-    transform: `rotate(-90 23 ${margin.top + plotHeight / 2})`,
-  });
-  yTitle.textContent = mode.axis;
-  svg.appendChild(yTitle);
-
   const pointGroup = createSvgElement("g", { class: "points" });
   models.forEach((model) => {
     const hash = hashAlias(model.alias);
@@ -414,15 +401,15 @@ function renderChart() {
       transform: `translate(${x(model.size_b) + jitterX} ${y(score) + jitterY})`,
       tabindex: "0",
       role: "button",
-      "aria-label": `${model.name}, ${mode.label} ${scoreLabel(score)}, størrelse ${model.size_b}B`,
+      "aria-label": `${model.name}, ${mode.label} ${percentScoreLabel(score)}, størrelse ${model.size_b}B`,
     });
     point.dataset.alias = model.alias;
     const title = createSvgElement("title");
     const band = bandFor(model);
     title.textContent = [
       model.name,
-      `Score: ${scoreLabel(model.feighetsjustert_score)}`,
-      `Rå: ${scoreLabel(model.dunning_kruger_score)}`,
+      `Score: ${percentScoreLabel(model.feighetsjustert_score)}`,
+      `Rå: ${percentScoreLabel(model.dunning_kruger_score)}`,
       `Trekk: ${penaltyLabel(model)}`,
       `Kategori: ${categoryLabel(band.label)}`,
     ].join("\n");
