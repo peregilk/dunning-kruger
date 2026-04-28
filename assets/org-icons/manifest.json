@@ -1,0 +1,212 @@
+[
+  {
+    "organisation": "AI Sweden",
+    "slug": "ai_sweden",
+    "source_file": "sources/ai_sweden.png",
+    "source_url": "https://via.tt.se/data/images/00069/1aa6b21d-742c-4ec8-abee-8da6cb2948f5.png",
+    "source_page": "https://via.tt.se/pressrum/3236039/ai-sweden/m",
+    "processing": "fit-to-circle",
+    "scale": "auto",
+    "note": "Official AI Sweden secondary logotype PNG from Via TT press material."
+  },
+  {
+    "organisation": "Allen AI",
+    "slug": "allen_ai",
+    "source_file": "sources/allen_ai.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/ai2-color.png",
+    "source_page": "https://lobehub.com/icons/ai2",
+    "processing": "fit",
+    "scale": 0.93,
+    "note": "LobeHub static colour Ai2/Allen AI icon asset."
+  },
+  {
+    "organisation": "AMD",
+    "slug": "amd",
+    "source_file": "sources/amd.png",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/AMD_Logo.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:AMD_Logo.png",
+    "processing": "fit",
+    "scale": 0.9,
+    "note": "AMD wordmark file from Wikimedia Commons."
+  },
+  {
+    "organisation": "BSC",
+    "slug": "bsc",
+    "source_file": "sources/bsc.png",
+    "source_url": "https://hpai.bsc.es/images/bsc-logo.png",
+    "source_page": "https://hpai.bsc.es/",
+    "processing": "fit",
+    "scale": 0.92,
+    "note": "Barcelona Supercomputing Center logo image from BSC HPAI site."
+  },
+  {
+    "organisation": "Essential AI",
+    "slug": "essential_ai",
+    "source_file": "sources/essential_ai.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/essentialai-color.png",
+    "source_page": "https://lobehub.com/icons/essentialai",
+    "processing": "fit",
+    "scale": 0.94,
+    "note": "LobeHub static colour Essential AI icon asset."
+  },
+  {
+    "organisation": "Google",
+    "slug": "google",
+    "source_file": "sources/google.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/google-color.png",
+    "source_page": "https://lobehub.com/icons/google",
+    "processing": "fit",
+    "scale": 0.88,
+    "note": "LobeHub static colour Google icon asset."
+  },
+  {
+    "organisation": "Hugging Face",
+    "slug": "hugging_face",
+    "source_file": "sources/hugging_face.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/huggingface-color.png",
+    "source_page": "https://lobehub.com/icons/huggingface",
+    "processing": "fit",
+    "scale": 0.91,
+    "note": "LobeHub static colour Hugging Face icon asset."
+  },
+  {
+    "organisation": "LumiOpen",
+    "slug": "lumiopen",
+    "source_file": "sources/lumiopen.png",
+    "source_url": "https://avatars.githubusercontent.com/u/148319641?s=200&v=4",
+    "source_page": "https://github.com/LumiOpen",
+    "processing": "cover",
+    "scale": 1.0,
+    "note": "GitHub organisation avatar."
+  },
+  {
+    "organisation": "Marin",
+    "slug": "marin",
+    "source_file": "sources/marin.png",
+    "source_url": "https://avatars.githubusercontent.com/u/210491432?s=200&v=4",
+    "source_page": "https://github.com/marin-community",
+    "processing": "cover",
+    "scale": 1.0,
+    "note": "GitHub organisation avatar."
+  },
+  {
+    "organisation": "Meta",
+    "slug": "meta",
+    "source_file": "sources/meta.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/meta-color.png",
+    "source_page": "https://lobehub.com/icons/meta",
+    "processing": "fit",
+    "scale": 0.91,
+    "note": "LobeHub static colour Meta icon asset."
+  },
+  {
+    "organisation": "Mistral AI",
+    "slug": "mistral_ai",
+    "source_file": "sources/mistral_ai.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/mistral-color.png",
+    "source_page": "https://lobehub.com/icons/mistral",
+    "processing": "fit",
+    "scale": 0.74,
+    "note": "LobeHub static colour Mistral AI icon asset."
+  },
+  {
+    "organisation": "National Library of Norway",
+    "slug": "national_library_of_norway",
+    "source_file": "sources/national_library_of_norway.png",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Nasjonalbiblioteket_-_National_Library_of_Norway_%2815456834720%29.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nasjonalbiblioteket_-_National_Library_of_Norway_(15456834720).png",
+    "processing": "fit",
+    "scale": 0.86,
+    "note": "National Library of Norway symbol file from Wikimedia Commons."
+  },
+  {
+    "organisation": "Norallm",
+    "slug": "norallm",
+    "source_file": "sources/norallm.webp",
+    "source_url": "https://cdn-avatars.huggingface.co/v1/production/uploads/5ffcf4d3f97bc16204743028/XOCoarruqY46aZCgJQyr3.png",
+    "source_page": "https://huggingface.co/norallm",
+    "processing": "cover",
+    "scale": 1.0,
+    "note": "Hugging Face organisation avatar."
+  },
+  {
+    "organisation": "NorwAI",
+    "slug": "norwai",
+    "source_file": "sources/norwai.webp",
+    "source_url": "https://cdn-avatars.huggingface.co/v1/production/uploads/6613ad0c2ea344bca1d2f157/5EESt8JwACnNFRp4MR4pc.png",
+    "source_page": "https://huggingface.co/NorwAI",
+    "processing": "fit",
+    "scale": 0.94,
+    "note": "Hugging Face organisation avatar."
+  },
+  {
+    "organisation": "NVIDIA",
+    "slug": "nvidia",
+    "source_file": "sources/nvidia.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/nvidia-color.png",
+    "source_page": "https://lobehub.com/icons/nvidia",
+    "processing": "fit",
+    "scale": 0.76,
+    "note": "LobeHub static colour NVIDIA icon asset."
+  },
+  {
+    "organisation": "OpenGPT-X",
+    "slug": "opengpt_x",
+    "source_file": "sources/opengpt_x.webp",
+    "source_url": "https://cdn-avatars.huggingface.co/v1/production/uploads/64243ad773f771f6630871e4/hEd9NX37W8BJ-cAJcfo-9.png",
+    "source_page": "https://huggingface.co/openGPT-X",
+    "processing": "cover",
+    "scale": 1.0,
+    "note": "Hugging Face organisation avatar."
+  },
+  {
+    "organisation": "Qwen",
+    "slug": "qwen",
+    "source_file": "sources/qwen.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/qwen-color.png",
+    "source_page": "https://lobehub.com/icons/qwen",
+    "processing": "fit",
+    "scale": 0.9,
+    "note": "LobeHub static colour Qwen icon asset."
+  },
+  {
+    "organisation": "Swiss AI",
+    "slug": "swiss_ai",
+    "source_file": "sources/swiss_ai.webp",
+    "source_url": "https://cdn-avatars.huggingface.co/v1/production/uploads/648211d39c44e3422ca7e4f3/gnfixzw9IqBziR6bzA6u8.png",
+    "source_page": "https://huggingface.co/swiss-ai",
+    "processing": "cover",
+    "scale": 1.0,
+    "note": "Hugging Face organisation avatar."
+  },
+  {
+    "organisation": "Tencent",
+    "slug": "tencent",
+    "source_file": "sources/tencent.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/tencent-color.png",
+    "source_page": "https://lobehub.com/icons/tencent",
+    "processing": "fit",
+    "scale": 0.82,
+    "note": "LobeHub static colour Tencent icon asset."
+  },
+  {
+    "organisation": "TII",
+    "slug": "tii",
+    "source_file": "sources/tii.png",
+    "source_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/tii-color.png",
+    "source_page": "https://lobehub.com/icons/tii",
+    "processing": "fit",
+    "scale": 0.88,
+    "note": "LobeHub static colour TII icon asset."
+  },
+  {
+    "organisation": "Utter Project",
+    "slug": "utter_project",
+    "source_file": "sources/utter_project.webp",
+    "source_url": "https://cdn-avatars.huggingface.co/v1/production/uploads/62262e19d36494a6f743a28d/1RJ1KWnGHD4h987dVzACV.png",
+    "source_page": "https://huggingface.co/utter-project",
+    "processing": "fit",
+    "scale": 0.82,
+    "note": "Hugging Face organisation avatar; trimmed/fitted to keep the full umlaut mark inside the circle."
+  }
+]

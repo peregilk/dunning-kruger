@@ -3,75 +3,47 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Den norske Dunning-Kruger-testen for AI</title>
+    <title>Den norske Dunning–Kruger-testen for AI</title>
     <meta
       name="description"
       content="Offentlig presentasjon av norske hallucinasjonsfeller for språkmodeller."
     >
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css?v=20260427-evidence">
   </head>
   <body>
     <header class="site-header">
       <div>
-        <p class="eyebrow">Norsk benchmark for falske premisser</p>
-        <h1>Den norske Dunning-Kruger-testen for AI</h1>
+        <h1>Den norske Dunning–Kruger-testen for AI</h1>
         <p class="lead">
-          Hvor lett er det å få en språkmodell til å svare med selvsikker tull?
-          Her måles evnen til å stoppe, sjekke premisset og si fra når spørsmålet
-          prøver å lokke modellen ut på tynn fjordis.
+          Tester om språkmodeller oppdager falske premisser – eller svarer
+          selvsikkert på noe som ikke gir mening.
         </p>
-      </div>
-      <div class="release-note">
-        <span id="publishedAt">Publisert</span>
-        <strong id="modelCount">0 modeller</strong>
-        <span>Public eval, 100 spørsmål</span>
       </div>
     </header>
 
     <main>
-      <section class="summary-grid" aria-label="Resultatsammendrag">
-        <article class="stat">
-          <span>Beste DK-score</span>
-          <strong id="bestScore">-</strong>
-          <small id="bestModel">-</small>
-        </article>
-        <article class="stat">
-          <span>Mest forsiktige kontrollsvar</span>
-          <strong id="toughnessSpread">-</strong>
-          <small>Tøffhet måler svarvilje på gyldige spørsmål.</small>
-        </article>
-        <article class="stat">
-          <span>Publiseringskrav</span>
-          <strong>100/100</strong>
-          <small>Modeller uten komplett public-eval dekning vises ikke i plottet.</small>
-        </article>
-      </section>
-
       <section class="chart-section" aria-labelledby="chartTitle">
-        <div class="section-heading">
-          <div>
-            <h2 id="chartTitle">Endelig score mot modellstørrelse</h2>
-            <p>
-              Ett punkt per modell. X-aksen er antall milliarder parametre,
-              Y-aksen er Dunning-Kruger-score, og ikonene følger modellfamilie
-              eller organisasjon. Dette er altså vitenskap med små navneskilt.
-            </p>
+        <div class="section-heading chart-heading">
+          <h2 id="chartTitle" class="sr-only">Score mot modellstørrelse</h2>
+          <div class="mode-panel" aria-label="Velg scoremodus">
+            <div class="segmented" role="tablist">
+              <button class="active" type="button" role="tab" aria-selected="true" data-score-mode="adjusted">Score</button>
+              <button type="button" role="tab" aria-selected="false" data-score-mode="raw">Rå</button>
+            </div>
           </div>
-          <p class="chart-note">Tøffhet vises i detaljpanelet og tabellen.</p>
         </div>
 
-        <div class="visual-grid">
+        <div class="chart-layout">
           <div class="chart-wrap">
             <svg id="scoreChart" role="img" aria-labelledby="chartTitle chartDescription"></svg>
             <p id="chartDescription" class="sr-only">
               Punktdiagram som viser modellstørrelse mot valgt score.
             </p>
           </div>
-          <aside class="model-detail" id="modelDetail" aria-live="polite">
-            <div class="badge large">DK</div>
+          <p class="chart-note">Størrelse alene forklarer ikke forskjellen i score.</p>
+          <section class="model-detail" id="modelDetail" aria-live="polite">
             <h3>Velg en modell</h3>
-            <p>Punktene bruker enkle, modellspesifikke merker. NB/Borealis får NB-merke når fullførte resultater eksporteres.</p>
-          </aside>
+          </section>
         </div>
       </section>
 
@@ -79,7 +51,7 @@
         <div class="section-heading compact">
           <div>
             <h2 id="tableTitle">Resultatliste</h2>
-            <p>Hovedscoren belønner avvisning av ugyldige spørsmål. Kontrollscoren straffer ren «vet ikke»-refleks.</p>
+            <p><span id="modelCount">0 modeller</span></p>
           </div>
         </div>
         <div class="table-wrap">
@@ -88,10 +60,10 @@
               <tr>
                 <th>Modell</th>
                 <th>Størrelse</th>
-                <th>DK-score</th>
-                <th>Tøffhet</th>
-                <th>Klasse</th>
-                <th>Svake tema</th>
+                <th>Score</th>
+                <th>Rå</th>
+                <th>Trekk</th>
+                <th>Kategori</th>
               </tr>
             </thead>
             <tbody id="resultsTable"></tbody>
@@ -99,50 +71,26 @@
         </div>
       </section>
 
-      <section class="examples-section" aria-labelledby="examplesTitle">
-        <div class="section-heading compact">
-          <div>
-            <h2 id="examplesTitle">Små museumsobjekter fra hallusinasjonsskapet</h2>
-            <p>Alle eksempler er fra det offentlige eval-settet. De er morsomme helt til de havner i produksjon.</p>
-          </div>
-        </div>
-        <div class="examples-grid" id="examplesGrid"></div>
-      </section>
-
-      <section class="method-section" aria-labelledby="methodTitle">
-        <h2 id="methodTitle">Hvorfor dette finnes</h2>
-        <p>
-          Mange feil i små og mellomstore språkmodeller er ikke bare kunnskapshull.
-          De er manglende premisskontroll: modellen svarer fordi spørsmålet har formen
-          til et svarbart spørsmål. Denne testen skiller derfor mellom to ting:
-          å avvise en falsk forutsetning, og å tørre å svare på et nært, gyldig
-          kontrollspørsmål.
-        </p>
-        <p>
-          Målet er ikke å lage en vittig tabell over rare svar. Målet er å bygge
-          språkmodeller som kan brukes i norsk offentlighet, forskning og næringsliv
-          uten å finne på kommuner, broer, paragrafer og sportsfinaler som aldri har eksistert.
-        </p>
-        <ul class="reference-list">
-          <li><a href="https://arxiv.org/abs/2109.07958">TruthfulQA: Measuring How Models Mimic Human Falsehoods</a></li>
-          <li><a href="https://arxiv.org/abs/2207.05221">Language Models (Mostly) Know What They Know</a></li>
-          <li><a href="https://www.nature.com/articles/s41586-024-07421-0">Detecting hallucinations in large language models using semantic entropy</a></li>
-        </ul>
-      </section>
-
-      <section class="excluded-section" aria-labelledby="excludedTitle">
-        <h2 id="excludedTitle">Ikke publisert i plottet</h2>
-        <p>Disse modellene hadde ikke komplett public-eval dekning i kildekjøringene.</p>
-        <div id="excludedModels" class="excluded-list"></div>
-      </section>
     </main>
 
-    <footer>
-      <span>Public repo: eval-sett, protokoll og publiserte aggregater.</span>
-      <span>Private repo: fullsett, skjult test, kjørelogikk og råsvar.</span>
+    <dialog class="examples-modal" id="examplesModal" aria-labelledby="examplesModalTitle">
+      <div class="modal-shell">
+        <div class="modal-head">
+          <div>
+            <h2 id="examplesModalTitle">Eksempler</h2>
+            <p id="examplesModalSubtitle"></p>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Lukk">&times;</button>
+        </div>
+        <div class="modal-body" id="examplesModalBody"></div>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <span id="updatedAt">Oppdatert</span>
     </footer>
 
-    <script src="generated/results/results.js"></script>
-    <script src="assets/app.js"></script>
+    <script src="generated/results/results.js?v=20260427-evidence"></script>
+    <script src="assets/app.js?v=20260427-evidence"></script>
   </body>
 </html>
