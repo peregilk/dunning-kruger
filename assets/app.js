@@ -446,13 +446,18 @@ function renderDetail() {
   const detail = document.getElementById("modelDetail");
   if (!model) return;
   const band = bandFor(model);
+  const examples = model.selected_examples || {};
+  const missCount =
+    typeof model.invalid_failures === "number"
+      ? model.invalid_failures
+      : (examples.hallucination_misses || []).length;
+  const refusalCount =
+    typeof model.control_refusals === "number"
+      ? model.control_refusals
+      : (examples.control_refusals || []).length;
   detail.innerHTML = `
-    <div class="model-card-head">
+    <div class="model-card-title">
       <h3>${escapeHtml(model.name)}</h3>
-      <div class="model-actions" aria-label="Vis eksempler for valgt modell">
-        <button type="button" data-modal-view="hallucination_misses">Vis feil svar</button>
-        <button type="button" data-modal-view="control_refusals">Vis trekk</button>
-      </div>
     </div>
     <dl class="selected-stats" aria-label="Valgt modell">
       <div class="metric-primary"><dt>Score</dt><dd>${scoreLabel(model.feighetsjustert_score)}</dd></div>
@@ -460,6 +465,10 @@ function renderDetail() {
       <div class="metric-tertiary"><dt>Trekk</dt><dd>${penaltyLabel(model)}</dd></div>
       <div class="metric-secondary"><dt>Kategori</dt><dd>${categoryLabel(band.label)}</dd></div>
     </dl>
+    <div class="model-actions" aria-label="Vis eksempler for valgt modell">
+      <button class="model-action-primary" type="button" data-modal-view="hallucination_misses">Inkompetente svar (${missCount})</button>
+      <button class="model-action-secondary" type="button" data-modal-view="control_refusals">Feige svar (${refusalCount})</button>
+    </div>
   `;
   detail.querySelectorAll("[data-modal-view]").forEach((button) => {
     button.addEventListener("click", () => openExamplesModal(button.dataset.modalView));
@@ -498,7 +507,7 @@ function openExamplesModal(view) {
   const examples = model.selected_examples || {};
   const rows = examples[view] || [];
   const isTrekk = view === "control_refusals";
-  title.textContent = isTrekk ? "Trekk" : "Feil svar";
+  title.textContent = isTrekk ? "Feige svar" : "Inkompetente svar";
   subtitle.textContent = model.name;
   body.innerHTML = `
     <div class="examples-grid modal-examples">

@@ -293,51 +293,70 @@ h3 {
 }
 
 .model-detail {
-  padding: 16px;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.55fr) minmax(420px, 1.45fr) minmax(230px, auto);
+  gap: 18px 24px;
+  align-items: center;
+  padding: 16px 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fbfcfe;
 }
 
-.model-card-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: start;
-  margin-bottom: 12px;
-}
-
-.model-card-head h3 {
-  margin-bottom: 0;
+.model-card-title h3 {
+  margin: 0;
   font-size: 1.12rem;
+  line-height: 1.25;
 }
 
 .model-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-end;
+  display: grid;
+  gap: 8px;
+  justify-self: end;
+  min-width: 230px;
 }
 
 .model-actions button {
-  min-height: 42px;
-  padding: 0 16px;
-  border: 1px solid #b9c2cf;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid #aeb8c6;
   border-radius: 8px;
-  background: #fff;
-  color: var(--ink);
   font: inherit;
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   font-weight: 850;
+  white-space: nowrap;
   cursor: pointer;
+  box-shadow: 0 1px 0 rgba(24, 33, 47, 0.04);
+}
+
+.model-action-primary {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.model-action-secondary {
+  background: #ffffff;
+  color: var(--ink);
 }
 
 .model-actions button:hover,
 .model-actions button:focus {
   border-color: var(--ink);
-  background: var(--ink);
+  background: #283447;
   color: #fff;
   outline: none;
+}
+
+.model-actions .model-action-secondary:hover,
+.model-actions .model-action-secondary:focus {
+  background: #eef2f7;
+  color: var(--ink);
+}
+
+.model-actions button:focus-visible {
+  outline: 2px solid #6f8fd8;
+  outline-offset: 2px;
 }
 
 .model-detail dl,
@@ -607,6 +626,11 @@ th {
     display: grid;
   }
 
+  .model-detail {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
   .model-detail dl,
   .selected-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -630,12 +654,10 @@ th {
     justify-items: stretch;
   }
 
-  .model-card-head {
-    display: grid;
-  }
-
   .model-actions {
-    justify-content: flex-start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-self: stretch;
+    min-width: 0;
   }
 }
 
@@ -658,6 +680,10 @@ th {
   .model-detail dl,
   .selected-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .model-actions {
+    grid-template-columns: 1fr;
   }
 
   .examples-grid {
