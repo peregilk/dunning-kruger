@@ -40,6 +40,7 @@ amd-instella-3b-instruct,Instella 3B Instruct,AMD,Instella,3.0,7.0,6.0,92.0,93,1
 tencent-hunyuan-0-5b-instruct,Hunyuan 0.5B Instruct,Tencent,Hunyuan,0.5,5.0,2.0,38.0,95,3,62,100,100,local-small-20260425-gpu1a,tencent/Hunyuan-0.5B-Instruct
 tencent-hunyuan-4b-instruct,Hunyuan 4B Instruct,Tencent,Hunyuan,4.0,5.0,4.0,96.0,95,1,4,100,100,local-4b-20260425-gpu0e,tencent/Hunyuan-4B-Instruct
 nbailab-borealis-270m-instruct-preview,Borealis 270m Instruct Preview,National Library of Norway,Borealis/NB,0.27,4.0,1.0,81.0,96,3,19,100,100,local-small-20260425-gpu0a,NbAiLab/borealis-270m-instruct-preview
+google-gemma-3-270m,Gemma 3 270m,Google,Gemma,0.27,4.0,1.0,16.0,96,3,84,100,100,local-gemma3-270m-20260604-gpu0,google/gemma-3-270m
 huggingfacetb-smollm3-3b,SmolLM3 3B,Hugging Face,SmolLM,3.0,4.0,4.0,97.0,96,0,3,100,100,local-mid-20260425-gpu0c,HuggingFaceTB/SmolLM3-3B
 tencent-hunyuan-7b-instruct,Hunyuan 7B Instruct,Tencent,Hunyuan,7.0,4.0,4.0,81.0,96,0,19,100,100,local-7b-20260425-gpu1g,tencent/Hunyuan-7B-Instruct
 allenai-olmo-2-1124-7b-instruct,OLMo 2 1124 7B Instruct,Allen AI,OLMo,7.0,4.0,4.0,95.0,96,0,5,100,100,local-7b-20260425-gpu0g,allenai/OLMo-2-1124-7B-Instruct
@@ -47,4 +48,5 @@ tencent-hunyuan-1-8b-instruct,Hunyuan 1.8B Instruct,Tencent,Hunyuan,1.8,2.0,2.0,
 tiiuae-falcon-h1-1-5b-instruct,Falcon H1 1.5B Instruct,TII,Falcon,1.5,1.0,1.0,95.0,99,0,5,100,100,local-small-20260425-gpu1a,tiiuae/Falcon-H1-1.5B-Instruct
 bsc-lt-salamandra-2b-instruct,Salamandra 2B Instruct,BSC,Salamandra,2.0,1.0,1.0,100.0,99,0,0,100,100,local-small-20260425-gpu1a,BSC-LT/salamandra-2b-instruct
 nbailab-nb-gpt-j-6b-alpaca,Nb Gpt J 6B Alpaca,National Library of Norway,Borealis/NB,6.0,1.0,1.0,98.0,99,0,2,100,100,local-7b-20260425-gpu0i-rerun,NbAiLab/nb-gpt-j-6B-alpaca
+google-gemma-4-12b,Gemma 4 12B,Google,Gemma,12.0,1.0,0.0,0.0,99,1,100,100,100,local-gemma4-12b-20260604-gpu1,google/gemma-4-12B
 tiiuae-falcon-h1-0-5b-instruct,Falcon H1 0.5B Instruct,TII,Falcon,0.5,0.0,0.0,60.0,100,0,40,100,100,local-small-20260425-gpu1b,tiiuae/Falcon-H1-0.5B-Instruct
