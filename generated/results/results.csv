@@ -1,4 +1,5 @@
 alias,name,organization,family,size_b,dunning_kruger_score,feighetsjustert_score,toffhet_score,invalid_failures,feighetsjustert_penalty,control_refusals,scored_items,total_items,run_id,hf_repo
+google-gemma-4-12b-it,Gemma 4 12B IT,Google,Gemma,12.0,97.0,87.0,90.0,3,10,10,100,100,local-gemma4-12b-it-20260604-gpu0,google/gemma-4-12B-it
 google-gemma-4-e4b-it,Gemma 4 E4B IT,Google,Gemma,4.0,94.0,84.0,90.0,6,10,10,100,100,local-gemma4-20260425-gpu1,google/gemma-4-E4B-it
 meta-llama-llama-3-1-8b-instruct,Llama 3.1 8B Instruct,Meta,Llama,8.0,89.0,74.0,85.0,11,15,15,100,100,local-8b-20260425-gpu1h,meta-llama/Llama-3.1-8B-Instruct
 google-gemma-4-e2b-it,Gemma 4 E2B IT,Google,Gemma,2.0,88.0,72.0,83.0,12,16,17,100,100,local-gemma4-20260425-gpu0,google/gemma-4-E2B-it
@@ -48,5 +49,4 @@ tencent-hunyuan-1-8b-instruct,Hunyuan 1.8B Instruct,Tencent,Hunyuan,1.8,2.0,2.0,
 tiiuae-falcon-h1-1-5b-instruct,Falcon H1 1.5B Instruct,TII,Falcon,1.5,1.0,1.0,95.0,99,0,5,100,100,local-small-20260425-gpu1a,tiiuae/Falcon-H1-1.5B-Instruct
 bsc-lt-salamandra-2b-instruct,Salamandra 2B Instruct,BSC,Salamandra,2.0,1.0,1.0,100.0,99,0,0,100,100,local-small-20260425-gpu1a,BSC-LT/salamandra-2b-instruct
 nbailab-nb-gpt-j-6b-alpaca,Nb Gpt J 6B Alpaca,National Library of Norway,Borealis/NB,6.0,1.0,1.0,98.0,99,0,2,100,100,local-7b-20260425-gpu0i-rerun,NbAiLab/nb-gpt-j-6B-alpaca
-google-gemma-4-12b,Gemma 4 12B,Google,Gemma,12.0,1.0,0.0,0.0,99,1,100,100,100,local-gemma4-12b-20260604-gpu1,google/gemma-4-12B
 tiiuae-falcon-h1-0-5b-instruct,Falcon H1 0.5B Instruct,TII,Falcon,0.5,0.0,0.0,60.0,100,0,40,100,100,local-small-20260425-gpu1b,tiiuae/Falcon-H1-0.5B-Instruct
